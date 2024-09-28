@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mealz/data/dummy_data.dart';
+import 'package:mealz/models/category.dart';
+import 'package:mealz/widgets/category_grid_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
@@ -10,18 +13,16 @@ class CategoriesScreen extends StatelessWidget {
         title: Text('Food Categories'),
       ),
       body: GridView(
+        padding: EdgeInsets.all(24),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 3 / 2,
             crossAxisSpacing: 20,
             mainAxisSpacing: 20),
         children: [
-          Text('1'),
-          Text('2'),
-          Text('3'),
-          Text('4'),
-          Text('5'),
-          Text('6'),
+          //availableCategories.map((category)=> CategoryGridItem(category:)).toList();
+          for (final category in availableCategories)
+            CategoryGridItem(category: category),
         ],
       ),
     );
