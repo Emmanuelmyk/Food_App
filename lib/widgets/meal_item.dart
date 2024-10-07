@@ -3,16 +3,16 @@ import 'package:mealz/models/meal.dart';
 import 'package:mealz/screens/meal_details.dart';
 import 'package:mealz/widgets/meal_item_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
-import 'package:mealz/screens/categories.dart';
-import 'package:mealz/screens/meal_details.dart';
 
 class MealItem extends StatelessWidget {
   const MealItem({
     super.key,
     required this.meal,
+    required this.onToggleFavorite,
   });
 
   final Meal meal;
+  final void Function(Meal meal) onToggleFavorite;
   String get complexityText {
     return meal.complexity.name[0].toUpperCase() +
         meal.complexity.name.substring(
@@ -43,6 +43,7 @@ class MealItem extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => MealsDetailsScreen(
                 meal: meal,
+                onToggleFavorite: onToggleFavorite,
               ),
             ),
           );
