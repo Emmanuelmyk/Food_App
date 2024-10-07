@@ -48,7 +48,39 @@ class _TabsScreenState extends State<TabsScreen> {
         title: Text(activePageTitle),
       ),
       drawer: Drawer(
-        child: activePage,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 84, 9, 9),
+              ),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.category),
+              title: Text('Categories'),
+              onTap: () {
+                // Handle navigation to Categories screen here
+                Navigator.pop(context); // Close the drawer
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text('Favorites'),
+              onTap: () {
+                // Handle navigation to Favorites screen here
+                Navigator.pop(context); // Close the drawer
+              },
+            ),
+          ],
+        ),
       ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
