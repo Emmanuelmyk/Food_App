@@ -32,14 +32,14 @@ class MealsScreen extends StatelessWidget {
         ],
       ),
     );
-    // if (meals.isNotEmpty) {
-    //   content = ListView.builder(
-    //     itemCount: meals.length,
-    //     itemBuilder: (ctx, index) => MealItem(
-    //       meal: meals[index],
-    //     ),
-    //   );
-    // }
+    if (meals.isNotEmpty) {
+      content = ListView.builder(
+        itemCount: meals.length,
+        itemBuilder: (ctx, index) => MealItem(
+          meal: meals[index],
+        ),
+      );
+    }
 
     if (title == null) {
       return content;
