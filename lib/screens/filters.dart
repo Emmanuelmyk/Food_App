@@ -28,7 +28,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   ),
             ),
             subtitle: Text(
-              'Only include glutten-pree meals.',
+              'Only include glutten-free meals.',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Theme.of(context).colorScheme.primary,
                   ),
