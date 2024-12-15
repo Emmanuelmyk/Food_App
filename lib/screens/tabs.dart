@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mealz/provider/favorites_provider.dart';
 import 'package:mealz/provider/meals_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mealz/models/meal.dart';
 import 'package:mealz/screens/categories.dart';
 import 'package:mealz/screens/filters.dart';
 import 'package:mealz/screens/meals.dart';
